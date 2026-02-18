@@ -27,7 +27,7 @@
   </style>
 </head>
 
-<body class="min-h-screen bg-base-200 max-w-lg mx-auto">
+<body class="min-h-screen bg-base-200 pb-2 max-w-lg mx-auto">
   
   <header class="border-b-2 border-gray-300">
     <section class="nav w-11/12 mx-auto py-3 flex items-center justify-between">
@@ -36,7 +36,7 @@
           <img src="../assets/logo.png" alt="">
         </div>
         <div class="balance-info">
-          <h2 class="text-2xl font-semibold"><span>45000</span></h2>
+          <h2 class="text-2xl font-semibold">$<span id="balance">45000</span></h2>
           <p class="text-neutral/50">Available Balance</p>
         </div>
 
@@ -83,28 +83,30 @@
     </div>
 
     <div id="">
-        <h2 class="text-3xl my-5 mt-10">Cash Out</h2>
-
+      <h2 class="text-3xl my-5 mt-10">Cash Out</h2>
       <div class="card bg-base-100 w-full mx-auto mb-20 shadow rounded-2xl">
         <div class="card-body font-semibold">
           <fieldset class="fieldset mx-2">
-            <label class="label text-neutral/80 font-medium text-[16px]">Agent Number</label>
-            <input id="number-input" type="text"
+            <label  class="label text-neutral/80 font-medium text-[16px]">Agent Number</label>
+            <input id="cashout-number" type="text"
               class="input w-full outline-none rounded-full bg-base-300" value="" placeholder="Enter 11 Digit number" />
 
             <label class="label text-neutral/80 font-medium text-[16px] mt-2">Amount</label>
-            <input id="number-input" type="text"
+            <input id="cashout-amount" type="number"
               class="input w-full outline-none rounded-full bg-base-300" value="" placeholder="Enter your amount" />
       
             <label class="label text-neutral/80 font-medium text-[16px] mt-2">Pin Numbmer</label>
             <input id="pin-input" maxlength="4" type="password" class="input outline-none rounded-full w-full bg-base-300"
               placeholder="Enter 4 Digit Pin Number" />
-            <button id="cash-out-btn" class="btn btn-primary rounded-full mt-3 mb-3">Withdraw Money</button>
+            <button id="cash-out-btn" class="btn btn-primary rounded-full mt-3">Withdraw Money</button>
           </fieldset>
         </div>
       </div>
     </div>
   </section>
+
+
+  <script src="../JS/home.js"></script>
 </body>
 
 </html>
