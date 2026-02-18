@@ -13,7 +13,7 @@ document.getElementById('login-btn').addEventListener('click', function () {
     //step-3.1 true::>> alert=> homepage
     alert('login seccess');
     // window.location.replace('/home.html')
-    window.location.assign('../home.html');
+    window.location.assign('../HTML/home.html');
   } else {
     //step-3.2 false::>> alert=> return
     alert('login failed plz input correct number or pin');
