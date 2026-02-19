@@ -29,7 +29,7 @@
 
 <body class="min-h-screen bg-base-200 pb-2 max-w-lg mx-auto">
   
-  <header class="border-b-2 border-gray-300">
+  <header class="border-b-2 border-gray-300 sticky top-0 bg-base-200 z-10">
     <section class="nav w-11/12 mx-auto py-3 flex items-center justify-between">
       <div class="right flex items-center gap-3">
         <div class="logo w-[60px]">
@@ -55,11 +55,11 @@
 
     <div class="buttons card">
       <div class="grid grid-cols-3 gap-5">
-        <button class="btn btn-primary btn-soft flex-col py-12 gap-2 rounded-xl">
+        <button onclick="showOnly('add-money')" class="btn btn-primary btn-soft flex-col py-12 gap-2 rounded-xl">
           <img src="../assets/opt-1.png" alt="">
           <p>Add Money</p>
         </button>
-        <button class="btn btn-primary btn-soft flex-col py-12 gap-2 rounded-xl">
+        <button onclick="showOnly('cash-out')" class="btn btn-primary btn-soft flex-col py-12 gap-2 rounded-xl">
           <img src="../assets/opt-2.png" alt="">
           <p>Cashout</p>
         </button>
@@ -82,7 +82,37 @@
       </div>
     </div>
 
-    <div id="">
+    <div id="add-money">
+      <h2 class="text-3xl my-5 mt-10">Add Money</h2>
+      <div class="card bg-base-100 w-full mx-auto mb-20 shadow rounded-2xl">
+        <div class="card-body font-semibold">
+          <fieldset class="fieldset mx-2">
+            <label class="label text-neutral/80 font-medium text-[16px]">Select Bank</label>
+            <select id="add-money-bank" class="select select-neutral w-full rounded-full border-gray-300 bg-base-300">
+              <option  disabled selected>Select a bank</option>
+              <option value="DBBL">DBBL</option>
+              <option value="IBBL">IBBL</option>
+              <option value="IFIC">IFIC</option>
+            </select>
+
+            <label class="label text-neutral/80 font-medium text-[16px]">Bank Account Number</label>
+            <input id="bank-account-number" type="text" class="input w-full outline-none rounded-full bg-base-300" value=""
+              placeholder="Enter 11 Digit number" />
+      
+            <label class="label text-neutral/80 font-medium text-[16px] mt-2">Amount to Add</label>
+            <input id="add-amount" type="number" class="input w-full outline-none rounded-full bg-base-300" value=""
+              placeholder="Add Amount" />
+      
+            <label class="label text-neutral/80 font-medium text-[16px] mt-2">Pin Numbmer</label>
+            <input id="add-money-pin" maxlength="4" type="password" class="input outline-none rounded-full w-full bg-base-300"
+              placeholder="Enter 4 Digit Pin Number" />
+            <button id="add-money-btn" class="btn btn-primary rounded-full mt-3">Add Money</button>
+          </fieldset>
+        </div>
+      </div>
+    </div>
+
+    <div id="cash-out">
       <h2 class="text-3xl my-5 mt-10">Cash Out</h2>
       <div class="card bg-base-100 w-full mx-auto mb-20 shadow rounded-2xl">
         <div class="card-body font-semibold">
@@ -106,7 +136,10 @@
   </section>
 
 
+  <script src="../JS/machine.js"></script>
+  <script src="../JS/addMoney.js"></script>
   <script src="../JS/home.js"></script>
+  
 </body>
 
 </html>
